@@ -21,9 +21,9 @@ public class SetUp2 {
 
     @Test
     public void isCalculatorAppInstalled() throws MalformedURLException {
-        capabilities.setCapability("deviceName", "Pixel 6 Pro API 30");
+        capabilities.setCapability("deviceName", "Pixel 6 Pro API 33");
         capabilities.setCapability("platformName", "Android");
-        capabilities.setCapability("platformVersion", "11.0");
+        capabilities.setCapability("platformVersion", "13.0");
         capabilities.setCapability("automationName", "UiAutomator2");
         capabilities.setCapability("app", System.getProperty("user.dir") + "/app/Calculator.apk");
         appiumDriver = new AppiumDriver<MobileElement>(new URL("http://127.0.0.1:4723"), capabilities);
@@ -40,9 +40,9 @@ public class SetUp2 {
     @Test
     public void capabilityTypes() throws MalformedURLException {
 
-        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel 6 Pro API 30");
+        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel 6 Pro API 33");
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
-        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11.0");
+        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "13.0");
         capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
         capabilities.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir") + "/app/Calculator.apk");
 

@@ -30,9 +30,9 @@ public class SetUp {
 
     @Test
     public void setupCalculator() throws MalformedURLException {
-        capabilities.setCapability("deviceName", "Pixel 6 Pro API 30");
+        capabilities.setCapability("deviceName", "Pixel 6 Pro API 33");
         capabilities.setCapability("platformName", "Android");
-        capabilities.setCapability("platformVersion", "11.0");
+        capabilities.setCapability("platformVersion", "13.0");
         capabilities.setCapability("automationName", "UiAutomator2");
         // can be downloaded from apkpure
         // create a package with name app under the project name than drag and drop the downloaded app
