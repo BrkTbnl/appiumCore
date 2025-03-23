@@ -14,20 +14,17 @@ public class ConfigReader {
             FileInputStream fileInputStream = new FileInputStream(filePath);
             properties = new Properties();
             properties.load(fileInputStream);
-        } catch (FileNotFoundException e){
-            System.out.println("File Could'nt Be Found");
-        }catch (IOException e){
-            System.out.println("File Could'nt be Load From Properties File");
+        } catch (FileNotFoundException e) {
+            System.out.println("The specified file could not be found.");
+        } catch (IOException e) {
+            System.out.println("An error occurred while loading data from the properties file.");
         }
     }
 
     public static String getProperty(String key){
         return  properties.getProperty(key) ;
     }
-    public static String get(String keyName) {
 
-        return properties.getProperty(keyName);
-    }
 
 
 
