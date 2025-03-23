@@ -54,7 +54,7 @@ public class CreateDriverClass {
     }
     @AfterTest
     public void tearDown(){
-        Driver.closeAppiumDriver();
+        Driver.quitAppiumDriver();
 
     }
 }
