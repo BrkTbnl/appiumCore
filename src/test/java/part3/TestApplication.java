@@ -1,7 +1,5 @@
 package part3;
 
-import io.appium.java_client.TouchAction;
-import io.appium.java_client.android.AndroidTouchAction;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -25,8 +23,11 @@ public class TestApplication {
 //        action.tap(point(87,207)).perform();
 //        rb.waitFor(3);
 
+        rm.waitFor(1);
         rm.tap(87,207);
-        rm.waitFor(3);
+        rm.waitFor(1);
+        rm.tap(115,1503);
+        rm.waitFor(1);
     }
 
     @AfterTest
