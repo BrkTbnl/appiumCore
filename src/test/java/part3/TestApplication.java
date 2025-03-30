@@ -23,8 +23,8 @@ public class TestApplication {
 //        action.tap(point(87,207)).perform();
 //        rb.waitFor(3);
 
-        rm.waitFor(1);
-        rm.tap(87,207);
+        rm.waitFor(2);
+        rm.tap(87,200);
         rm.waitFor(1);
         rm.tap(115,1503);
         rm.waitFor(1);
