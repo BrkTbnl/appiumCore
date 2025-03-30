@@ -31,9 +31,18 @@ public class apiDemoPage extends Hooks {
     public WebElement getViewsButton(){
         return findElementByAccessibilityId("Views");
     }
+    public WebElement getWebView2Button(){
+        return findElementByAccessibilityId("WebView2");
+    }
+    public WebElement getListButton(){
+        return findElementByAccessibilityId("Lists");
+    }
 
 
     public void clickElement(WebElement element) {
         element.click();
     }
+
+
+
 }

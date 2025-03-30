@@ -27,7 +27,7 @@ public class ReusableMethods {
         tap.addAction(finger.createPointerMove(Duration.ofMillis(0), PointerInput.Origin.viewport(), x, y));
         tap.addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
         tap.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
-        Hooks.androidDriver.perform(Arrays.asList(tap));
+        Hooks.androidDriver.perform(List.of(tap));
     }
 
     public void scrollToFrom(int startPointX, int startPointY, int endPointX, int endPointY) {
