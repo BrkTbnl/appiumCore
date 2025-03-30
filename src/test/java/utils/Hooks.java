@@ -24,7 +24,7 @@ public class Hooks {
             capabilities.setCapability("platformVersion", ConfigReader.getProperty("platformVersion"));
             capabilities.setCapability("automationName", ConfigReader.getProperty("automationName"));
             capabilities.setCapability("app", System.getProperty("user.dir") + ConfigReader.getProperty("app"));
-            capabilities.setCapability("noReset", true);
+            capabilities.setCapability("noReset", false);
             androidDriver = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723"), capabilities);
 
         }catch (MalformedURLException e){
