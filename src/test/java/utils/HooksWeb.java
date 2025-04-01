@@ -2,7 +2,9 @@ package utils;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import java.net.MalformedURLException;
@@ -10,6 +12,7 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 public class HooksWeb {
+
     public static AndroidDriver androidDriver;
 
     static DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -24,12 +27,16 @@ public class HooksWeb {
             capabilities.setCapability("browserName", "chrome");
             androidDriver = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723"), capabilities);
             androidDriver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-        }catch (MalformedURLException e){
-            System.err.println("Malformed Url Exception: "+e.getMessage());
+        } catch (MalformedURLException e) {
+            System.err.println("Malformed Url Exception: " + e.getMessage());
         }
+    }
 
-
-
-
+    @AfterMethod
+    public void tearDown() {
+        if (androidDriver != null) {
+            androidDriver.quit();
+            androidDriver = null;
+        }
     }
 }
