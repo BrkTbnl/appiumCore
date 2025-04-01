@@ -1,6 +1,5 @@
 package part5;
 
-import io.appium.java_client.android.AndroidDriver;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import page.HerokuAppPage;
